@@ -1,0 +1,53 @@
+@import "utilities";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#showcase {
+  background: rgba(5, 130, 233, 0.486);
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url("../img/background.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+#search {
+  position: relative;
+  padding-top: 1.5rem;
+
+  &-input {
+    width: 100%;
+    border-radius: 360px;
+    border: 1px $grey-color solid;
+    padding: 0.8rem 2.5rem 0.8rem 1rem;
+
+    &:focus {
+      outline: none;
+      border: 3px $focus-color solid;
+      transition: 0.5s all ease-in-out;
+      & + i {
+        color: $focus-color;
+        transition: 0.5s all ease-in-out;
+      }
+    }
+  }
+  &-icon {
+    position: absolute;
+    top: 34px;
+    right: 15px;
+    color: $grey-color;
+    font-size: 1.5rem;
+  }
+}
