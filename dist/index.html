@@ -10,19 +10,49 @@
       integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/main.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div id="showcase">
       <div id="search" class="search-container">
-        <input type="text" id="search-input" />
-        <i class="fas fa-search " id="search-icon"></i>
+        <form id="search-form">
+          <input type="text" id="search-input" />
+          <i class="fas fa-search " id="search-icon"></i>
+        </form>
       </div>
       <div class="container">
-        <div class="main-part"></div>
+        <div class="main-part">
+          <div class="header">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
+            <div class="header-title">
+              <h1 id="city-name">Tehran, IR</h1>
+              <h3 id="city-date">Mon-April 24</h3>
+            </div>
+          </div>
+          <div class="temp">
+            <p><i class="fas fa-angle-double-down"></i>12<span>&#176;</span></p>
+
+            <h2 class="temp-main">32<span>&#176;</span></h2>
+
+            <p><i class="fas fa-angle-double-up"></i>45<span>&#176;</span></p>
+          </div>
+          <h2 id="forcast">
+            Mostly Cloudy
+          </h2>
+        </div>
         <div class="side-part"></div>
       </div>
     </div>
+
+    <script src="js/weather.js"></script>
+    <script src="js/localstorage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
