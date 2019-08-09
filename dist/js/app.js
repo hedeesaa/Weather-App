@@ -9,5 +9,9 @@ document.getElementById("search-form").addEventListener("submit", e => {
 });
 
 function getWeather(city) {
-  weather.getWeather(city).then(result => console.log(result));
+  weather.getWeather(city).then(result => {
+    console.log(result);
+
+    ui.showWeather(result.response, weather.getDate(result.response.dt));
+  });
 }
