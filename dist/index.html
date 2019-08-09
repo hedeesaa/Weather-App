@@ -14,23 +14,30 @@
       href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Syncopate&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/main.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div id="showcase">
-      <div id="search" class="search-container">
-        <form id="search-form">
-          <input type="text" id="search-input" />
-          <i class="fas fa-search " id="search-icon"></i>
-        </form>
+      <div class="main-content">
+        <h1 id="main-title">How is the Weather?</h1>
+        <div id="search" class="search-container">
+          <form id="search-form">
+            <input type="text" id="search-input" />
+            <i class="fas fa-search " id="search-icon"></i>
+          </form>
+        </div>
+        <div class="content"></div>
       </div>
-      <div class="container"></div>
     </div>
 
     <script src="js/weather.js"></script>
-    <script src="js/localstorage.js"></script>
+    <script src="js/storage.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/app.js"></script>
   </body>

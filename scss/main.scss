@@ -13,6 +13,10 @@ body {
   background: rgba(5, 130, 233, 0.486);
   height: 100vh;
   position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &::before {
     content: "";
@@ -25,7 +29,11 @@ body {
     z-index: -1;
   }
 }
-
+#main-title {
+  font-family: "Syncopate", sans-serif;
+  color: white;
+  text-align: center;
+}
 #search {
   position: relative;
   padding-top: 1.5rem;
@@ -58,10 +66,12 @@ body {
 .main-part {
   padding: 1rem;
   color: white;
+  margin-right: 6rem;
   .header {
     display: flex;
     align-items: center;
     padding-right: 2rem;
+
     img {
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
@@ -97,5 +107,48 @@ body {
   }
 }
 .side-part {
-  background: yellow;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  .box {
+    background: rgba(197, 195, 195, 0.322);
+    padding: 1rem 2.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    color: white;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  .search-container {
+    max-width: calc(100% - 30px);
+  }
+  .main-part {
+    margin-right: 0px;
+  }
+  @media (max-width: 400px) {
+    .side-part {
+      padding: 0rem 0.5rem;
+    }
+  }
+}
+@media (max-height: 450px) {
+  .container {
+    margin-top: 0.2rem;
+  }
+  #search {
+    padding-top: 0rem;
+
+    &-icon {
+      top: 0.5rem;
+    }
+  }
+  .main-part {
+    margin-right: 0px;
+    padding: 0;
+  }
 }
